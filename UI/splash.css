@@ -1,0 +1,36 @@
+#eyeSplash {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px; /* Initial size, adjust as needed */
+    height: 300px; /* Initial size, adjust as needed */
+    transform: translate(-50%, -50%);
+    opacity: 1; /* Initially hidden */
+    z-index: 9999; /* To ensure it's above everything else */
+    animation: eyeGrow 2s 2s forwards;
+}
+
+@keyframes eyeGrow {
+    to {
+        width: 200vw; /* Cover entire viewport */
+        height: 200vh; /* Cover entire viewport */
+        transform: translate(-50%, -50%) scale(30); /* Adjust scale based on your needs */
+    }
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #030303;
+    z-index: 9998; /* Below the eyeSplash but above everything else */
+    animation: fadeOut 0.5s 2.1s forwards; /* Adjust the duration as needed */
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}

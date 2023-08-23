@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <title>Digit Recognizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="splash.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
+    
+</head>
+<body style="background-color: #000000;">
+    <div id="overlay"></div>
+    <object id="eyeSplash" type="image/svg+xml" data="../resources/splash-img/splash_1.svg">Your browser does not support SVG</object>
+    <div class="page">
+        <div class="title-bar">
+            <div class="draggable">
+                <div class="title">Digit Recognizer</div>
+            </div>
+            <div class="window-controls">
+                <button class="material-symbols-outlined" id="min-btn">remove</button>
+                <button class="material-symbols-outlined" id="max-btn">check_box_outline_blank</button>
+                <button class="material-symbols-outlined" id="close-btn">close</button>
+            </div>
+        </div>
+        <div class="top-bar"></div>
+        <!-- <div class="main-container">
+            <canvas id="drawingCanvas" width="200" height="200"></canvas>
+            <script src="drawer.js"></script>
+        </div> -->
+        <div class="main-container">
+            <div class="draw-container">
+                <h2>Draw a digit below</h2>
+                <text>Make sure the digit takes up most of the canvas space.</text>
+                <canvas class="canvas-drawing" id="drawingCanvas" width="200" height="200"></canvas>
+                <script src="drawer.js"></script>
+            </div>
+            <div class="softmax-container">
+                <div class="softmax-bars-container">
+                    <div class="probability" data-digit="0">
+                        <span class="digit">0</span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="probability" data-digit="1">
+                        <span class="digit">1</span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="probability" data-digit="2">
+                        <span class="digit">2</span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="probability" data-digit="3">
+                        <span class="digit">3</span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="probability" data-digit="4">
+                        <span class="digit">4</span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="probability" data-digit="5">
+                        <span class="digit">5</span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="probability" data-digit="6">
+                        <span class="digit">6</span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="probability" data-digit="7">
+                        <span class="digit">7</span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="probability" data-digit="8">
+                        <span class="digit">8</span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="probability" data-digit="9">
+                        <span class="digit">9</span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <div class ="softmax-prediction-container">
+                    <h3></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="title-bar.js"></script>
+</body>
+</html>

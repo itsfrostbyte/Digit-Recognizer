@@ -1,0 +1,162 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;  /* Ensure that the body takes up the full viewport height */
+    box-sizing: border-box; /* Makes the width calculation include padding and border */
+    position: relative;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    height: 100%;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+    /* background-color: #131313; */
+}
+
+.draw-container {
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #131313;
+    align-items: center;
+    justify-content:center;
+}
+
+.draw-container h1, h2, h3, h4 {
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    
+}
+
+.draw-container text {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 70px;
+}
+
+.canvas-drawing{
+    border: 2px dashed white;  /* White dashed border */
+    cursor: crosshair;
+    border-radius: 10px;
+    /* margin-top: 40%; */
+}
+
+.softmax-container {
+    display: flex;
+    flex-direction: column;
+    flex: 7;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #131313;
+    
+}
+
+.softmax-bars-container{
+    flex: 7;
+    margin: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.softmax-prediction-container{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.softmax-prediction-container h2,h3,h4{
+    margin-bottom: 10px;
+}
+
+.probability {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+.digit {
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.bar {
+    background-color: #ac2bd3;  /* Or any color you prefer */
+    height: 10px;
+    flex-grow: 1;  /* Starts with no width */
+    transition: flex-grow 0.3s ease-in-out;
+}
+
+.top-bar{
+    height: 50px;
+    min-height: 50px;
+    background-color: #000000;
+}
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    height: 30px;
+    color: #c9c9c9;
+    /* padding: 5px; */
+}
+
+.draggable {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    -webkit-app-region: drag;
+}
+
+.title{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.window-controls {
+    display: flex;
+}
+
+.window-controls button {
+    background: #000000;
+    border: none;
+    color:#fcfcfc;
+    font-size: 18px;
+    padding: 5px;
+    
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#close-btn:hover {
+    background-color: #d31616;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 48;
+  }
