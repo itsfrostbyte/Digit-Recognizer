@@ -1,3 +1,5 @@
+![image](https://github.com/itsfrostbyte/Digit-Recognizer/assets/16723288/bdf70b5a-8394-4da5-a5f6-b05389db3848)
+
 --------INFO---------
 
     This is my 'Hello World' project for machine learning. I used the MNIST data to train my model.
